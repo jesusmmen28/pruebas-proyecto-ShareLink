@@ -1,0 +1,16 @@
+*{
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  }
+
+  body {
+    background-color: rgb(76, 224, 126);
+    color: black;
+    min-height: 100vh;
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+  }
