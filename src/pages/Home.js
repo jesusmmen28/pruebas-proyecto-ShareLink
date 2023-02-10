@@ -8,7 +8,7 @@ import { AuthContext } from "../context/AuthContext";
 
 
 export const Home = () => {
-  const { enlaces, error, loading, addLink } = useLinks();
+  const { enlaces, error, loading, addLink, removeLink } = useLinks();
   const { user } = useContext(AuthContext);
 
 
@@ -24,7 +24,8 @@ export const Home = () => {
         <h1>Últimos links</h1>
         
 
-        <ListEnlaces enlaces={enlaces} />
+        <ListEnlaces enlaces={enlaces} removeLink={removeLink} />
+        
       </section>
     );
   };

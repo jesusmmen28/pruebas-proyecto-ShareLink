@@ -89,3 +89,32 @@ export const sendLiknService = async ({ data, token }) => {
 
   return json.data;
 };
+
+
+export const deleteLinkService = async ({ id, token }) => {
+  const response = await fetch(`${process.env.REACT_APP_API}/enlace/${id}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: token,
+    },
+  });
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+};
+
+export const getUserDataService = async (id) => {
+  const response = await fetch(`${process.env.REACT_APP_API}/user/${id}`);
+  
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+
+  return json.data;
+};
